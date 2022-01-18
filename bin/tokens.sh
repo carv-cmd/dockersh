@@ -28,6 +28,7 @@ Generate swarm worker token and add WORKER node to swarm.
  Standard CLI arguments for \`rsh\` (quoted)
 
 EOF
+exit 1
 }
 
 Error () {
@@ -99,6 +100,9 @@ main () {
     manage_over_rsh "$JOIN_SWARM"
 }
 
+if [[ "$WORKER" =~ -?-h(elp)? ]]; then
+    Usage
+fi
 main
 docker node ls
 
