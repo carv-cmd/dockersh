@@ -16,6 +16,7 @@ Usage () {
 usage: $PROGNAME SUBCMD [ARGS]
 
 Subcommands:
+ stack-up   Docker stack-up/teardown
  tokens     Distribute swarm keys.
  networks   Inspect docker networking.
  exec       Container shell.
